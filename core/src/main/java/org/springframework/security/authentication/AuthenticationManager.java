@@ -41,9 +41,11 @@ public interface AuthenticationManager {
 	 * <li>A {@link LockedException} must be thrown if an account is locked and the
 	 * <code>AuthenticationManager</code> can test for account locking.</li>
 	 * <li>A {@link BadCredentialsException} must be thrown if incorrect credentials are
-	 * presented. Whilst the above exceptions are optional, an
-	 * <code>AuthenticationManager</code> must <B>always</B> test credentials.</li>
+	 * presented.</li>
 	 * </ul>
+	 * While the above exceptions are optional, an <code>AuthenticationManager</code>
+	 * must <B>always</B> test credentials.</li>
+	 * <p>
 	 * Exceptions should be tested for and if applicable thrown in the order expressed
 	 * above (i.e. if an account is disabled or locked, the authentication request is
 	 * immediately rejected and the credentials testing process is not performed). This
